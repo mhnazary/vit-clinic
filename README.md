@@ -186,11 +186,11 @@ Replace <username> with your PostgreSQL username, <database_name> with the name 
 > Mention all of the collaborators of this project.
 
 ### 👤 **Mahram Hossain** 
- - GitHub: [@Betel](https://github.com/mhnazary)
+ - GitHub: [@Mahram hossain](https://github.com/mhnazary)
 
-  - Twitter: [@Betel](https://twitter.com/mh_nazary)
+  - Twitter: [@Mahram hossain](https://twitter.com/mh_nazary)
 
-  - LinkedIn: [Betel](https://www.linkedin.com/in/mh-nazary-515686204/)
+  - LinkedIn: [Mahram hossain](https://www.linkedin.com/in/mh-nazary-515686204/)
 
 
 
