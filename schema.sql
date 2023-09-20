@@ -9,4 +9,4 @@ CREATE TABLE animals(
 );
 -- Update the schema
 
-LATER TABLE animals ADD COLUMN species VARCHAR(50);
+ALTER TABLE animals ADD COLUMN species VARCHAR(50);
