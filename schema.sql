@@ -32,6 +32,9 @@ CREATE TABLE animals(
 
 ALTER TABLE animals ADD COLUMN species VARCHAR(50);
 
+--Delete the species column from the animals table
+ALTER TABLE animals DROP COLUMN species;
+
 
 CREATE TABLE owners (
     id SERIAL PRIMARY KEY,

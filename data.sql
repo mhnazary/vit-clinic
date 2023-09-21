@@ -30,3 +30,17 @@ INSERT INTO species (id,name) VALUES
     ('Digimon');
 
 -- update animals table
+UPDATE animals
+SET
+    species_id = (CASE
+        WHEN name LIKE '%mon' THEN (SELECT id FROM species WHERE name = 'Digimon')
+        ELSE (SELECT id FROM species WHERE name = 'Pokemon')
+    END),
+    owner_id = (CASE
+        WHEN name = 'Agumon' THEN (SELECT id FROM onwers WHERE full_name = 'Sam Smith')
+        WHEN name IN ('Gabumon', 'Pikachu') THEN (SELECT id FROM onwers WHERE full_name = 'Jennifer Orwell')
+        WHEN name IN ('Devimon', 'Plantmon') THEN (SELECT id FROM onwers WHERE full_name = 'Bob')
+        WHEN name IN ('Charmander', 'Squirtle', 'Blossom') THEN (SELECT id FROM onwers WHERE full_name = 'Melody Pond')
+        WHEN name IN ('Angemon', 'Boarmon') THEN (SELECT id FROM onwers WHERE full_name = 'Dean Winchester')
+        ELSE NULL
+    END);
