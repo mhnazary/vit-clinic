@@ -19,7 +19,7 @@ REFERENCES species (id);
 
 CREATE DATABASE vit_clinic;
 CREATE TABLE animals(
-    id PRIMARY KEY INTEGER,
+    id PRIMARY KEY SERIAL,
     name VARCHAR(50),
     date_of_birth DATE,
     escape_attempts INTEGER,
@@ -34,12 +34,12 @@ ALTER TABLE animals ADD COLUMN species VARCHAR(50);
 
 
 CREATE TABLE owners (
-    id INTEGER PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     full_name VARCHAR(100),
     age INTEGER
 );
 
 CREATE TABLE species (
-    id INTEGER PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     name VARCHAR(50)
 );
