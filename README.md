@@ -183,8 +183,6 @@ Replace <username> with your PostgreSQL username, <database_name> with the name 
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 ### 👤 **Mahram Hossain** 
  - GitHub: [@Mahram hossain](https://github.com/mhnazary)
 
@@ -199,8 +197,6 @@ Replace <username> with your PostgreSQL username, <database_name> with the name 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **Add new tables & create relations between**
 - [ ] **Add schema diagram**
@@ -221,17 +217,12 @@ Contributions are welcome! If you have any ideas, improvements, or bug fixes, pl
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project, please give a ⭐️ (Thank you)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
 - I would like to thank Microverse for this learning opportunity.
 
