@@ -1,16 +1,46 @@
 INSERT INTO animals(id, name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES 
-(1, 'Agumon', '2020-02-03', 0, true, 10.23),
-(2, 'Gabumon', '2018-11-15', 2, true, 8),
-(3, 'Pikachu', '2021-01-07', 1, false, 15.04),
-(4, 'Devimon', '2017-05-12', 5, true, 11);
+('Agumon', '2020-02-03', 0, true, 10.23),
+('Gabumon', '2018-11-15', 2, true, 8),
+('Pikachu', '2021-01-07', 1, false, 15.04),
+('Devimon', '2017-05-12', 5, true, 11);
 
 -- start Update
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg)
-(5, 'charmander', '2020-2-8', 0, FALSE, -11);
-(6, 'plantmon', '2021-11-15', 2, TRUE, -5.7);
-(7, 'squirtle', '1993-04-02', 3, FALSE, -12.13);
-(8, 'angemon', '2005-06-12', 1, TRUE, -45);
-(9, 'boarmon', '2005-06-07', 7, TRUE, 20.4);
-(10, 'blossom', '1998-10-13', 3, TRUE, 17);
-(11, 'Ditto', '2022-05-14', 4, TRUE, 22);
+('charmander', '2020-2-8', 0, FALSE, -11);
+('plantmon', '2021-11-15', 2, TRUE, -5.7);
+('squirtle', '1993-04-02', 3, FALSE, -12.13);
+('angemon', '2005-06-12', 1, TRUE, -45);
+('boarmon', '2005-06-07', 7, TRUE, 20.4);
+('blossom', '1998-10-13', 3, TRUE, 17);
+('Ditto', '2022-05-14', 4, TRUE, 22);
 -- end update
+
+-- insert data into owners table
+INSERT INTO onwers (id,full_name, age) VALUES
+    ('Sam Smith', 34),
+    ('Jennifer Orwell', 19),
+    ('Bob', 45),
+    ('Melody Pond', 77),
+    ('Dean Winchester', 14),
+    ('Jodie Whittaker', 38);
+
+-- insert data into species table
+INSERT INTO species (id,name) VALUES
+    ('Pokemon'),
+    ('Digimon');
+
+-- update animals table
+UPDATE animals
+SET
+    species_id = (CASE
+        WHEN name LIKE '%mon' THEN (SELECT id FROM species WHERE name = 'Digimon')
+        ELSE (SELECT id FROM species WHERE name = 'Pokemon')
+    END),
+    owner_id = (CASE
+        WHEN name = 'Agumon' THEN (SELECT id FROM onwers WHERE full_name = 'Sam Smith')
+        WHEN name IN ('Gabumon', 'Pikachu') THEN (SELECT id FROM onwers WHERE full_name = 'Jennifer Orwell')
+        WHEN name IN ('Devimon', 'Plantmon') THEN (SELECT id FROM onwers WHERE full_name = 'Bob')
+        WHEN name IN ('Charmander', 'Squirtle', 'Blossom') THEN (SELECT id FROM onwers WHERE full_name = 'Melody Pond')
+        WHEN name IN ('Angemon', 'Boarmon') THEN (SELECT id FROM onwers WHERE full_name = 'Dean Winchester')
+        ELSE NULL
+    END);
