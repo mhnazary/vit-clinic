@@ -11,7 +11,7 @@ SELECT date_of_birth FROM animals WHERE name IN ('Agumon', 'Pikachu');
  SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 
 
- -- UPDATE queries
+ -- UPDATE queries part
 
  BEGIN;
 
