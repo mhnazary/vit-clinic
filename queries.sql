@@ -94,7 +94,7 @@ SELECT species, MIN(weight_kg) AS min_weight, MAX(weight_kg) AS max_weight FROM 
 SELECT species, AVG(escape_attempts) AS avg_escape_attempts FROM animals
 WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
 
--- multiple tables
+-- multiple tables part
 -- Query 1: List all animals owned by Melody Pond.
 SELECT a.name
 FROM animals a
