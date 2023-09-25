@@ -211,7 +211,7 @@ FROM visits v
 JOIN animals a ON v.animal_id = a.id
 JOIN specializations sp ON a.species_id = sp.species_id
 JOIN species s ON sp.species_id = s.id
-WHERE a.owner_id = (SELECT id FROM onwers WHERE full_name = 'Maisy Smith')
+WHERE a.owner_id = (SELECT id FROM onwers WHERE full_name = 'vet Maisy Smith')
 GROUP BY s.name
 ORDER BY visit_count DESC
 LIMIT 1;
